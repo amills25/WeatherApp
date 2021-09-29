@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 // Make a request for a user with a given ID
-axios.get('https://github.com/amills25?tab=repositories')
+axios.get('api.openweathermap.org/data/2.5/weather?q={city name}&appid=e11e373f1e129fdd6a2ebaec6434d8b1')
   .then(function (response) {
     // handle success
     console.log(response);
@@ -10,9 +10,9 @@ axios.get('https://github.com/amills25?tab=repositories')
     // handle error
     console.log(error);
   })
-  .then(function () {
-    // always executed
-  });
+//   .then(function () {
+//     // always executed
+//   });
 
 
 //create variables
