@@ -23,7 +23,7 @@
                         aria-describedby="button-addon1">
                 </div>
                 <div class="col">
-                    <button class="btn btn-outline-secondary" type="button" id="goButton">Get Weather</button>
+                    <button class="btn btn-outline-secondary btn-info text-dark" type="button" id="goButton">Get Weather</button>
                 </div>
             </div>
             <br>
@@ -39,12 +39,12 @@
     <div class="container d-grid gap-3">
         <div class="container border border-dark">
             <div class="row">
-                <div class="col border border-dark text-center fw-bold">
+                <div class="col border border-dark text-center fw-bold bg-warning">
                     City
                 </div>
             </div>
             <div class="row" style="height:50px;">
-                <div class="col border border-dark text-center">
+                <div class="col border border-dark text-center" id="city">
                     Name of city
                 </div>
             </div>
@@ -52,18 +52,18 @@
 
         <div class="container border border-dark">
             <div class="row">
-                <div class="col border border-dark text-center fw-bold">
+                <div class="col border border-dark text-center fw-bold bg-warning">
                     Temperature
                 </div>
             </div>
             <div class="row" style="height:50px;">
-                <div class="col border border-dark text-center">
+                <div class="col border border-dark text-center" id="temp">
                     tempK
                 </div>
-                <div class="col border border-dark text-center">
+                <div class="col border border-dark text-center" id="tempF">
                     tempF
                 </div>
-                <div class="col border border-dark text-center">
+                <div class="col border border-dark text-center" id="tempC">
                     tempC
                 </div>
             </div>
@@ -71,12 +71,12 @@
 
         <div class="container border border-dark">
             <div class="row">
-                <div class="col border border-dark text-center fw-bold">
+                <div class="col border border-dark text-center fw-bold bg-warning">
                     Condition
                 </div>
             </div>
             <div class="row" style="height:50px;">
-                <div class="col border border-dark text-center">
+                <div class="col border border-dark text-center" id="condition">
                     Name of condition
                 </div>
             </div>
@@ -84,12 +84,12 @@
 
         <div class="container border border-dark">
             <div class="row">
-                <div class="col border border-dark text-center">
+                <div class="col border border-dark text-center bg-warning">
                     Other Info
                 </div>
             </div>
             <div class="row" style="height:200px;">
-                <div class="col border border-dark text-center">
+                <div class="col border border-dark text-center" id="img">
                     [image]
                 </div>
             </div>

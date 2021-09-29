@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 // Make a request for a user with a given ID
-axios.get('api.openweathermap.org/data/2.5/weather?q={city name}&appid=e11e373f1e129fdd6a2ebaec6434d8b1')
+axios.get('http://api.openweathermap.org/data/2.5/weather?q=Lexington&appid=e11e373f1e129fdd6a2ebaec6434d8b1')
   .then(function (response) {
     // handle success
     console.log(response);
@@ -10,13 +10,24 @@ axios.get('api.openweathermap.org/data/2.5/weather?q={city name}&appid=e11e373f1
     // handle error
     console.log(error);
   })
-//   .then(function () {
-//     // always executed
-//   });
 
+//trying to get a piece of the parsed data into the html
+const json = {"name":"Lexington", "clouds":"{all:20}"};
+const jsonInt = {"temp":"301.13"}
+const stringData = JSON.parse(json);
+const intData = JSON.parse(jsonInt);
+document.getElementById("temp").innerHTML = intData.temp;
+document.getElementById("tempF").innerHTML = ((intData.temp-273.15)*(9/5)+32);
+document.getElementById("tempC").innerHTML = (intData.temp-273.15);
 
 //create variables
 var goButton = document.getElementById("goButton");
+var city = document.getElementById("city");
+var temp = document.getElementById("temp");
+var tempF = document.getElementById("tempF");
+var tempC = document.getElementById("tempC");
+var condition = document.getElementById("condition");
+var img = document.getElementById("img");
 
 //function that sends us to the next page and runs state change
 function goButtonMethod() {

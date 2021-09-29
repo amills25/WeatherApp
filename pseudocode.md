@@ -24,6 +24,19 @@ letWeather = {} //weather state object
 .errorMsg = ""
 ```
 
+##### Variables
+* goButton
+* city
+* temp
+* tempF
+* tempC
+* condition
+* img
+* json
+* jsonInt
+* stringData
+* intData
+
 ### START
 * Validation -- make sure our data works
 * Call API
@@ -31,3 +44,9 @@ letWeather = {} //weather state object
 * onStateChange
 * Update view
 ### END
+
+#### Functions and such
+* hide()
+* show()
+* init()
+* onStateChange()
