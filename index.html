@@ -11,6 +11,7 @@
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
     <title>Weather App</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <bodyon load="init()">
@@ -20,14 +21,14 @@
             <div class="row text-center">
                 <div class="col">
                     <input type="text" class="form-control" placeholder="Enter your 5-digit zip code here" aria-label="5 Digit Zip Code"
-                        aria-describedby="button-addon1">
+                        aria-describedby="button-addon1" id="zip">
                 </div>
                 <div class="col">
                     <button class="btn btn-outline-secondary btn-info text-dark" type="button" id="goButton">Get Weather</button>
                 </div>
             </div>
             <br>
-            <div class="row">
+            <div class="row" id="error">
                 [Error message]
             </div>
             <br>
@@ -36,7 +37,7 @@
 
     <br>
 
-    <div class="container d-grid gap-3">
+    <div class="container d-grid gap-3" id="dataBox">
         <div class="container border border-dark">
             <div class="row">
                 <div class="col border border-dark text-center fw-bold bg-warning">
@@ -95,8 +96,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="./js/main.js"></script>

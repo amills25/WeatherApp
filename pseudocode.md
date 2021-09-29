@@ -36,13 +36,23 @@ letWeather = {} //weather state object
 * jsonInt
 * stringData
 * intData
+* errorMsg
 
 ### START
-* Validation -- make sure our data works
 * Call API
+ * get()
+* Validation -- make sure our data works
+ * then()
+ * onStateChange
+ * catch() 
+ * return errorMsg
 * Parse API data -- putting it into letWeather then it updates the view
-* onStateChange
+ * create vars for json data
+ * parse() or parseInt() to pull data we want
+* onStateChange()
+ * take data and plug it into html
 * Update view
+ * show() or hide() the pieces we want
 ### END
 
 #### Functions and such
