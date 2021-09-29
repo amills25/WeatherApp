@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Weather App</title>
+</head>
+
+<bodyon load="init()">
+    <header>
+        <h1 class="text-center">Weather App</h1>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Enter your 5-digit zip code here" aria-label="5 Digit Zip Code"
+                        aria-describedby="button-addon1">
+                </div>
+                <div class="col">
+                    <button class="btn btn-outline-secondary" type="button" id="goButton">Get Weather</button>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                [Error message]
+            </div>
+            <br>
+        </div>
+    </header>
+
+    <br>
+
+    <div class="container d-grid gap-3">
+        <div class="container border border-dark">
+            <div class="row">
+                <div class="col border border-dark text-center fw-bold">
+                    City
+                </div>
+            </div>
+            <div class="row" style="height:50px;">
+                <div class="col border border-dark text-center">
+                    Name of city
+                </div>
+            </div>
+        </div>
+
+        <div class="container border border-dark">
+            <div class="row">
+                <div class="col border border-dark text-center fw-bold">
+                    Temperature
+                </div>
+            </div>
+            <div class="row" style="height:50px;">
+                <div class="col border border-dark text-center">
+                    tempK
+                </div>
+                <div class="col border border-dark text-center">
+                    tempF
+                </div>
+                <div class="col border border-dark text-center">
+                    tempC
+                </div>
+            </div>
+        </div>
+
+        <div class="container border border-dark">
+            <div class="row">
+                <div class="col border border-dark text-center fw-bold">
+                    Condition
+                </div>
+            </div>
+            <div class="row" style="height:50px;">
+                <div class="col border border-dark text-center">
+                    Name of condition
+                </div>
+            </div>
+        </div>
+
+        <div class="container border border-dark">
+            <div class="row">
+                <div class="col border border-dark text-center">
+                    Other Info
+                </div>
+            </div>
+            <div class="row" style="height:200px;">
+                <div class="col border border-dark text-center">
+                    [image]
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
