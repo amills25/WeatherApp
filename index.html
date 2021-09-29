@@ -14,7 +14,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
-<bodyon load="init()">
+<body>
     <header>
         <h1 class="text-center">Weather App</h1>
         <div class="container">
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <br>
-            <div class="row" id="error">
+            <div class="row" id="error" style="visibility:hidden">
                 [Error message]
             </div>
             <br>
@@ -37,7 +37,7 @@
 
     <br>
 
-    <div class="container d-grid gap-3" id="dataBox">
+    <div class="container d-grid gap-3" id="dataBox" style="visibility:hidden">
         <div class="container border border-dark">
             <div class="row">
                 <div class="col border border-dark text-center fw-bold bg-warning">
@@ -97,7 +97,6 @@
         </div>
     </div>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="./js/main.js"></script>
 </body>
 
