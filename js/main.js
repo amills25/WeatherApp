@@ -3,10 +3,12 @@ var tempValue;
 var tempFValue;
 var tempCValue;
 var conditionValue;
+var zipValue;
 
 // Make a request for a user with a given ID
 function getWeather() {
-    axios.get('https://api.openweathermap.org/data/2.5/weather?zip=40509&appid=e11e373f1e129fdd6a2ebaec6434d8b1')
+    zipValue = document.getElementById('zip').value;
+    axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${zipValue},us&appid=e11e373f1e129fdd6a2ebaec6434d8b1`)
     .then(function (response) {
         // handle success
         cityValue = response.data.name;
@@ -40,13 +42,12 @@ var condition = document.getElementById("condition");
 var img = document.getElementById("img");
 var errorMsg = document.getElementById("error");
 var dataBox = document.getElementById("dataBox");
-var zip = document.getElementById("zip");
 
 //function that sends us to the next page and runs state change
 function goButtonMethod() {
-        getWeather();
-        onStateChange();
-    }
+    getWeather();
+    onStateChange();
+}
 //on click event listeners for each button sending to next page
 goButton.addEventListener('click', goButtonMethod);
 
