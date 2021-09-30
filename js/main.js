@@ -11,6 +11,7 @@ function getWeather() {
     axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${zipValue},us&appid=e11e373f1e129fdd6a2ebaec6434d8b1`)
     .then(function (response) {
         // handle success
+        //console.log(response);
         cityValue = response.data.name;
         tempValue = Math.round(response.data.main.temp);
         tempFValue = Math.round((tempValue-273.15)*(9/5)+32);
@@ -23,12 +24,11 @@ function getWeather() {
         tempC.innerHTML=tempCValue + "°C";
         condition.innerHTML=conditionValue;
         addImage(tempFValue);
-        //console.log(data);
     })
     .catch(function (error) {
         // handle failure
-        console.error(error);
-        //show(errorMsg);
+        //console.error(error);
+        badZip(zipValue);
     })
 }
 
@@ -67,6 +67,7 @@ function show(element) {
     element.style.visibility = "visible";
 }
 
+//function to add images to other info section based on temperature in F
 function addImage(temp) {
     if (temp > 70) {
         img.src="./img/hot.jpg";
@@ -77,19 +78,11 @@ function addImage(temp) {
     }
 }
 
-
-//   //same thing as what is above but with different syntax
-//   function getWeather() {
-//       try{
-//           var response = await axios.get('https://api.openweathermap.org/data/2.5/weather?zip=40504&appid=e11e373f1e129fdd6a2ebaec6434d8b1');
-//           // handle success
-//           cityValue = response.data.name;
-//           tempValue = response.data.main.temp;
-//           conditionValue = response.data.weather[0].main;
-//           console.log(data);
-//       }
-//       catch(error) {
-//           console.error(error);
-//       }
-//       console.log(response);
-//   }
+//function to call when you're in error
+function badZip(zip) {
+    if (!Number.isInteger(zip) || zip.toString().length != 5) {
+        errorMsg.innerHTML = "You have entered an invalid zip code.";
+        show(errorMsg);
+        hide(dataBox);
+    }
+}
