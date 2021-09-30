@@ -68,12 +68,11 @@ function show(element) {
 
 function addImage(temp) {
     if (temp > 70) {
-        //document.getElementById("img").src="./img/hot.jpg";
-        //img.innerHTML = "./img/hot.jpg";
+        img.src="./img/hot.jpg";
     } else if (temp <= 70 && temp > 32){
-        //img.innerHTML = "./img/mild.jpg";
+        img.src="./img/mild.jpg";
     } else{
-        //img.innerHTML = "./img/cold.jpg";
+        img.src="./img/cold.jpg";
     }
 }
 
